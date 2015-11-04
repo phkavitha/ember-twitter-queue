@@ -16,8 +16,18 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    torii: {
+        sessionServiceName: 'session',
+        providers: {
+          'twitter': {
+            requestTokenUri: '/auth/twitter'
+          }
+      }
     }
-  };
+  }
+
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
